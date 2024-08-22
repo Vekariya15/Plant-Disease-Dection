@@ -4,7 +4,7 @@ import numpy as np
 from tensorflow.keras.preprocessing.image import load_img, img_to_array
 from tensorflow.keras.models import load_model
 
-app = Flask(__name__, template_folder="templates")
+app = Flask(__name__, template_folder="templates")  
 
 # Load models
 cotton_model_path = "E:/AgroPlus/Final project/Plant_Disease_Dection/model/v3_pred_cott_dis.h5"
@@ -99,5 +99,4 @@ def predict():
     return render_template(template, result=result, user_image=file_path)
 
 
-if __name__ == "__main__":
-    app.run(debug=True)
+
