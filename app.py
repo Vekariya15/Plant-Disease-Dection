@@ -98,5 +98,6 @@ def predict():
         return "Template not found", 404
     return render_template(template, result=result, user_image=file_path)
 
-
+if __name__ == "__main__":
+    app.run(debug=True)
 
